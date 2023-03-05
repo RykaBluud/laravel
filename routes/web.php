@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/machines', 'SearchController@index');
+Route::get('/machines/simple', 'SearchController@simple')->name('simple_search');
+Route::get('/machines/advance', 'SearchController@advance')->name('advance_search');
